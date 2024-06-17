@@ -1,0 +1,268 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 490px;
+    width: 350px;
+    background: white;
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.1)
+    );
+    backdrop-filter: blur(1rem);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+    padding: 20px 50px;
+    border-radius: 0.8rem;
+    border: 1.5px solid rgba(255, 255, 255, 0.355);
+}
+
+img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.heading {
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+}
+
+.description {
+    font-size: 1.2rem;
+    font-weight: 500;
+    opacity: 60%;
+    color: white;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.share {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 10px;
+    gap: 5px;
+}
+
+.share p {
+    font-size: 0.8rem;
+}
+
+.follow {
+    font-size: 0.8rem;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+button {
+    border: 1.5px solid white;
+    background: white;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(1rem);
+}
+
+button:hover {
+    color: black;
+    background-color: white;
+}
+
+.object-1 {
+    height: 200px;
+    width: 200px;
+    background-color: #ee6049;
+    position: absolute;
+    border-radius: 50%;
+    animation: obj-1 8s infinite;
+}
+@keyframes obj-1 {
+    0% {
+        left: 28%;
+        top: 6%;
+        box-shadow: 0px 0px 40px 0px #ee6049;
+    }
+    50% {
+        left: 32%;
+        top: 8%;
+        box-shadow: 0px 0px 40px 0px #ee6049;
+    }
+    100% {
+        left: 28%;
+        top: 6%;
+        box-shadow: 0px 0px 40px 0px #ee6049;
+    }
+}
+
+.object-2 {
+    height: 300px;
+    width: 300px;
+    background-color: #6a45e3;
+    position: absolute;
+    border-radius: 50%;
+
+    animation: obj-2 8s infinite;
+}
+@keyframes obj-2 {
+    0% {
+        right: 25%;
+        bottom: 6%;
+        box-shadow: 0px 0px 40px 0px #6a45e3;
+    }
+    50% {
+        right: 30%;
+        bottom: 8%;
+        box-shadow: 0px 0px 40px 0px #6a45e3;
+    }
+    100% {
+        right: 25%;
+        bottom: 6%;
+        box-shadow: 0px 0px 40px 0px #6a45e3;
+    }
+}
+
+/* Modal Section */
+.modal {
+    height: 256px;
+    width: 550px;
+    position: absolute;
+    scale: 0;
+    padding: 20px 25px;
+    border: 2px solid grey;
+    background: black;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    backdrop-filter: blur(1rem);
+    border-radius: 10px;
+}
+
+.modal-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 5px 0;
+    border-bottom: 2px solid rgba(214, 186, 186, 0.7);
+}
+
+.modal-heading h1 {
+    font-weight: 600;
+}
+
+.fa-solid {
+    font-size: 30px;
+    color: white;
+}
+
+.modal-heading h1 {
+    color: white;
+}
+
+.modal p {
+    color: white;
+    margin: 30px 0 10px 0;
+    font-weight: 400;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.icon {
+    border: 1px solid #ffffff88;
+    padding: 25px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+    gap: 10px;
+    justify-content: center;
+    transition: all 0.5s;
+    margin-bottom: 25px;
+    text-decoration: none;
+}
+
+.icon i {
+    font-size: 26px;
+}
+
+#facebook {
+    color: #1771e6;
+    border: 1px solid #1771e6;
+}
+#facebook:hover {
+    background-color: #1771e6;
+    color: #fff;
+}
+
+#twitter {
+    color: #1c99e6;
+    border: 1px solid #1c99e6;
+}
+#twitter:hover {
+    background-color: #1c99e6;
+    color: #fff;
+}
+
+#instagram {
+    color: #cb2770;
+    border: 1px solid #cb2770;
+}
+#instagram:hover {
+    background-color: #cb2770;
+    color: #fff;
+}
+
+#whatsapp {
+    color: #2fe664;
+    border: 1px solid #2fe664;
+}
+#whatsapp:hover {
+    background-color: #2fe664;
+    color: #fff;
+}
+
+#telegram {
+    color: #0081c2;
+    border: 1px solid #0081c2;
+}
+#telegram:hover {
+    background-color: #0081c2;
+    color: #fff;
+}
+
+.active{
+    scale: 1;
+    z-index: 3;
+}
+
