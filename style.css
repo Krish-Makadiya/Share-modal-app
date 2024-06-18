@@ -32,7 +32,7 @@
     align-items: center;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
     padding: 20px 50px;
-    border-radius: 0.8rem;
+    border-radius: 1rem;
     border: 1.5px solid rgba(255, 255, 255, 0.355);
 }
 
@@ -72,7 +72,17 @@ img {
     gap: 5px;
 }
 
-.share p {
+.share i {
+    font-size: 1rem;
+}
+
+.btn:hover i,
+.btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.share div {
     font-size: 0.8rem;
 }
 
@@ -88,11 +98,6 @@ button {
     background: white;
     background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
     backdrop-filter: blur(1rem);
-}
-
-button:hover {
-    color: black;
-    background-color: white;
 }
 
 .object-1 {
@@ -127,7 +132,6 @@ button:hover {
     background-color: #6a45e3;
     position: absolute;
     border-radius: 50%;
-
     animation: obj-2 8s infinite;
 }
 @keyframes obj-2 {
@@ -160,6 +164,8 @@ button:hover {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     backdrop-filter: blur(1rem);
     border-radius: 10px;
+    z-index: 5;
+    transition: 0.5s ease-in-out;
 }
 
 .modal-heading {
@@ -261,8 +267,149 @@ button:hover {
     color: #fff;
 }
 
-.active{
+.active {
     scale: 1;
-    z-index: 3;
+    z-index: 10;
 }
 
+.overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #4d4d5561;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.overlay-active {
+    opacity: 1;
+}
+
+@media (max-width: 850px) {
+    .object-1 {
+        height: 200px;
+        width: 200px;
+    }
+    @keyframes obj-1 {
+        0% {
+            left: 18%;
+            top: 4%;
+            box-shadow: 0px 0px 40px 0px #ee6049;
+        }
+        50% {
+            left: 24%;
+            top: 6%;
+            box-shadow: 0px 0px 40px 0px #ee6049;
+        }
+        100% {
+            left: 18%;
+            top: 4%;
+            box-shadow: 0px 0px 40px 0px #ee6049;
+        }
+    }
+
+    .object-2 {
+        height: 250px;
+        width: 250px;
+    }
+    @keyframes obj-2 {
+        0% {
+            right: 15%;
+            bottom: 3%;
+            box-shadow: 0px 0px 40px 0px #6a45e3;
+        }
+        50% {
+            right: 20%;
+            bottom: 5%;
+            box-shadow: 0px 0px 40px 0px #6a45e3;
+        }
+        100% {
+            right: 15%;
+            bottom: 3%;
+            box-shadow: 0px 0px 40px 0px #6a45e3;
+        }
+    }
+
+    .container {
+        height: 450px;
+        width: 330px;
+        padding: 10px 20px;
+    }
+}
+
+/* For mobile Phone */
+@media (max-width: 480px) {
+    .container {
+        height: 500px;
+        width: 350px;
+        padding: 0 10px;
+    }
+
+    .object-1 {
+        height: 200px;
+        width: 200px;
+    }
+    @keyframes obj-1 {
+        0% {
+            left: 24%;
+            top: 20%;
+            box-shadow: 0px 0px 40px 0px #ee6049;
+        }
+        50% {
+            left: 20%;
+            top: 18%;
+            box-shadow: 0px 0px 40px 0px #ee6049;
+        }
+        100% {
+            left: 24%;
+            top: 20%;
+            box-shadow: 0px 0px 40px 0px #ee6049;
+        }
+    }
+
+    .object-2 {
+        height: 250px;
+        width: 250px;
+    }
+    @keyframes obj-2 {
+        0% {
+            right: 15%;
+            bottom: 18%;
+            box-shadow: 0px 0px 40px 0px #6a45e3;
+        }
+        50% {
+            right: 20%;
+            bottom: 15%;
+            box-shadow: 0px 0px 40px 0px #6a45e3;
+        }
+        100% {
+            right: 15%;
+            bottom: 18%;
+            box-shadow: 0px 0px 40px 0px #6a45e3;
+        }
+    }
+
+    .modal {
+        height: 230px;
+        width: 420px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .share {
+        padding: 12px 20px;
+        gap: 10px;
+    }
+    .share div{
+        font-size: 1rem;
+    }
+    .follow{
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+}
