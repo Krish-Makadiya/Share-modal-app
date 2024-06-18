@@ -178,14 +178,11 @@ button {
 
 .modal-heading h1 {
     font-weight: 600;
+    color: white;
 }
 
 .fa-solid {
     font-size: 30px;
-    color: white;
-}
-
-.modal-heading h1 {
     color: white;
 }
 
@@ -343,7 +340,7 @@ button {
 @media (max-width: 480px) {
     .container {
         height: 500px;
-        width: 350px;
+        width: 320px;
         padding: 0 10px;
     }
 
@@ -393,7 +390,7 @@ button {
 
     .modal {
         height: 230px;
-        width: 420px;
+        width: 360px;
     }
 
     .buttons {
@@ -411,5 +408,9 @@ button {
     .follow{
         padding: 12px 20px;
         font-size: 1rem;
+    }
+
+    h1{
+        font-size: 1.6rem;
     }
 }
